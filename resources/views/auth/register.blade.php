@@ -60,6 +60,27 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+                        
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label text-md-right">Age</label>
+
+                            <div class="col-md-6">
+                                <input id="age" type="number" class="form-control" name="age" required autocomple="age">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label text-md-right">Gender</label>
+
+                            <div class="col-md-6">
+                                <select id="gender" type="number" class="form-control" name="gender" required autocomple="gender">
+                                    <option disabled selected value> -- select an option -- </option>
+                                    <option value="hombre">Hombre</option>
+                                    <option value="mujer">Mujer</option>
+                                </select>
+                            </div>
+                        </div>
+
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -68,6 +89,9 @@
                                 </button>
                             </div>
                         </div>
+
+
+
                     </form>
                 </div>
             </div>
