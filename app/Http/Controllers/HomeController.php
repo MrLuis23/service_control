@@ -3,6 +3,7 @@
 namespace service_control\Http\Controllers;
 
 use Illuminate\Http\Request;
+use service_control\Service;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $services = Service::get();        
+        return view('home')->with('services',$services);
     }
 }

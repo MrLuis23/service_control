@@ -73,8 +73,8 @@
                             <label class="col-md-4 col-form-label text-md-right">Gender</label>
 
                             <div class="col-md-6">
-                                <select id="gender" type="number" class="form-control" name="gender" required autocomple="gender">
-                                    <option disabled selected value> -- select an option -- </option>
+                                <select id="gender" class="form-control" name="gender" required>
+                                    <option disabled selected value> -- Select an option -- </option>
                                     <option value="hombre">Hombre</option>
                                     <option value="mujer">Mujer</option>
                                 </select>

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
@@ -14,7 +14,16 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    
+                    @if(Auth::user()->hasRole('admin'))                       
+                    aaaa
+                    @else
+                        <a class="btn btn-success pull-right" href="{{ url('/services/create') }}" role="button">
+                            Nuevo Servicio
+                        </a>    
+                        
+                        @include('services.partials.table')
+                    @endif
                 </div>
             </div>
         </div>
