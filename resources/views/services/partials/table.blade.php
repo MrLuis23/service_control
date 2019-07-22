@@ -1,4 +1,4 @@
-<h1 class="text-primary">Control de Pasteles</h1>
+
 <table class="table table-bordered" id="MyTable"> 
     <thead>    
         <tr>

@@ -19,5 +19,14 @@ class users_seeder extends Seeder
             'gender' => 'mujer',
             'id_rol' => 2,
         ));	
+        DB::table('users')->insert(array(
+            'name' => 'user',
+            'email' => 'user@example.com',
+            'password' => bcrypt('pato1234'),
+            'age' => 34,
+            'gender' => 'mujer',
+            'id_rol' => 1,
+            'status' => FALSE,
+        ));	
     }
 }

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Service Control</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -16,7 +16,7 @@
 
                     
                     @if(Auth::user()->hasRole('admin'))                       
-                    aaaa
+                        @include('users.partials.table')
                     @else
                         <a class="btn btn-success pull-right" href="{{ url('/services/create') }}" role="button">
                             Nuevo Servicio

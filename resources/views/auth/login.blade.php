@@ -6,7 +6,11 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
-
+                <div class="col-md-6 text-danger"> 
+                    @if(session()->has('message')) 
+                        {{ session()->get('message') }} 
+                    @endif 
+                </div>    
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

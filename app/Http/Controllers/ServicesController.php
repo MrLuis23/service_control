@@ -5,13 +5,16 @@ namespace service_control\Http\Controllers;
 use Illuminate\Http\Request;
 use service_control\Service;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class ServicesController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
+        
     }
+
 
     public function index()
     {
@@ -26,6 +29,12 @@ class ServicesController extends Controller
 
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'user_id' => ['required', 'exists:users,id'],
+            'name' => ['required', 'string', 'max:50'],            
+            'status' => ['required', 'in:0,1'],
+        ]);
+
         $service = new Service;
         $service->user_id = Auth::id();
         $service->name = $request->input('name');            

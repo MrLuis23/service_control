@@ -25,8 +25,8 @@
                         </div>
                         <div class="form-group row">
                             <label class="col-md-4 col-form-label text-md-right">User</label>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" value="{{ $service->user_id}}" disabled> 
+                            <div class="col-md-6">                                
+                                <input type="text" class="form-control" value="{{ $service->user_id}}" disabled>                                 
                             </div>
                         </div>
                         <div class="form-group row">
